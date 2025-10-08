@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -18,13 +17,13 @@ import java.time.LocalDateTime;
 @Builder
 public class MatrixQuestion {
     @Id
-    private Integer matrixId;
+    private Long matrixId;
 
     @Id
-    private Integer questionId;
+    private Long questionId;
 
-    private Integer questionOrder;
-    private BigDecimal marksAllocated;
+    private Long questionOrder;
+    private Float marksAllocated;
     private LocalDateTime createdAt;
 
     @ManyToOne

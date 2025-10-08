@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class Options {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer optionId;
+    private Long optionId;
 
     @ManyToOne
     @JoinColumn(name = "questionId")
@@ -27,7 +27,7 @@ public class Options {
     private String optionText;
 
     private Boolean isCorrect;
-    private Integer optionOrder;
+    private Long optionOrder;
     private LocalDateTime createdAt;
 }
 

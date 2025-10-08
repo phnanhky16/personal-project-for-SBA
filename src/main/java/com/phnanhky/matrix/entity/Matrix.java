@@ -18,7 +18,7 @@ import java.util.List;
 public class Matrix {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer matrixId;
+    private Long matrixId;
 
     @ManyToOne
     @JoinColumn(name = "examId")
@@ -26,7 +26,7 @@ public class Matrix {
 
     private String matrixName;
     private String description;
-    private Integer totalQuestions;
+    private Long totalQuestions;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

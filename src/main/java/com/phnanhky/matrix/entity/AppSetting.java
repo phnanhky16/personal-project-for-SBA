@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class AppSetting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer settingId;
+    private Long settingId;
 
     private String settingName;
 

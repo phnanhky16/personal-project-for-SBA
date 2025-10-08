@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class QuestionType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer questionTypeId;
+    private Long questionTypeId;
 
     @Column(unique = true)
     private String typeName;

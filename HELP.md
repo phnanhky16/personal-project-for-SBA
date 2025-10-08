@@ -33,3 +33,21 @@ While most of the inheritance is fine, it also inherits unwanted elements like `
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
+
+## Deploying locally with Docker Compose
+
+This project includes a `Dockerfile` and `docker-compose.yml` to run the application together with a PostgreSQL database.
+
+1. Copy or create an `.env` file at the repository root with the DB settings (the repo already includes an example `.env`).
+2. Start the stack:
+
+```bash
+docker compose up --build
+```
+
+The app will be available at http://localhost:8080 and Postgres on port 5432.
+
+## CI / Container registry
+
+A GitHub Actions workflow is provided at `.github/workflows/ci.yml` which builds the application and publishes a Docker image to GitHub Container Registry. To enable publishing, configure a repository secret with appropriate permissions (if you want automatic image publishing).
+

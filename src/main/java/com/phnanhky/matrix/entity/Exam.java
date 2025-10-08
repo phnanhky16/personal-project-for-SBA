@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -20,13 +19,13 @@ import java.util.List;
 public class Exam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer examId;
+    private Long examId;
 
     private String examName;
     private String description;
     private Integer durationMinutes;
-    private BigDecimal totalMarks;
-    private BigDecimal passingMarks;
+    private Float totalMarks;
+    private Float passingMarks;
     private LocalDateTime examDate;
 
     @Enumerated(EnumType.STRING)

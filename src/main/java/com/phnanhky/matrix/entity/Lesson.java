@@ -18,7 +18,7 @@ import java.util.List;
 public class Lesson {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer lessonId;
+    private Long lessonId;
 
     @ManyToOne
     @JoinColumn(name = "grade_id")
@@ -29,7 +29,7 @@ public class Lesson {
     @Column(columnDefinition = "TEXT")
     private String lessonContent;
 
-    private Integer lessonOrder;
+    private Long lessonOrder;
 
     @Column(columnDefinition = "TEXT")
     private String learningObjectives;

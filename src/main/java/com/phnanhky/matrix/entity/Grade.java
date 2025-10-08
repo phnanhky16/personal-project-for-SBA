@@ -18,7 +18,7 @@ import java.util.List;
 public class Grade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer gradeId;
+    private Long gradeId;
 
     @ManyToOne
     @JoinColumn(name = "subjectId")

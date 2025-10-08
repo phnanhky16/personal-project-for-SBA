@@ -18,10 +18,10 @@ import java.time.LocalDateTime;
 @Builder
 public class TeacherMatrix {
     @Id
-    private Integer teacherId;
+    private Long teacherId;
 
     @Id
-    private Integer matrixId;
+    private Long matrixId;
 
     @Enumerated(EnumType.STRING)
     private TeacherRole role;

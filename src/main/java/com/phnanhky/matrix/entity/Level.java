@@ -17,12 +17,12 @@ import java.time.LocalDateTime;
 public class Level {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer levelId;
+    private Long levelId;
 
     @Column(unique = true)
     private String levelName;
 
-    private Integer difficultyScore;
+    private Long difficultyScore;
     private String description;
     private LocalDateTime createdAt;
 }
